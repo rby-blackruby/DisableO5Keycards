@@ -1,11 +1,10 @@
 ﻿using Harmony;
 
-
 namespace DisableO5Keycards
 {
     public class Plugin : EXILED.Plugin
     {
-        public override string getName { get; } = "DisableO5 - blackruby";
+        public override string getName { get; } = "DisableO5Keycards - blackruby";
         public static bool DisableO5;
         public static uint PatchCount;
 
@@ -17,11 +16,11 @@ namespace DisableO5Keycards
 
             if(DisableO5 == false)
             {
-                Plugin.Info("DisableO5 is disabled on this server.");
+                Plugin.Info("DisableO5Keycards is disabled on this server.");
                 return;
             }
 
-            Plugin.Info("Thank you for using DisableO5 - blackruby");
+            Plugin.Info("Thank you for using DisableO5Keycards - blackruby");
             Plugin.Info("While disable_o5 is set to true, nobody is able to upgrade their keycards to O5 on the server.");
 
             HarmonyInstance = HarmonyInstance.Create($"blackruby.exiled.disableo5{PatchCount}");
@@ -36,7 +35,6 @@ namespace DisableO5Keycards
 
         public override void OnReload()
         {
-            
         }
 
     }
